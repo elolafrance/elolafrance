@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Elo la France</title>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/ebrunel.css" rel="stylesheet">
+    <link href="css/font_custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="css/font1.css" rel="stylesheet" type="text/css">
+    <link href="css/font2.css" rel="stylesheet" type="text/css">
+        <style>
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e2245d; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #254a77; 
+}
+</style>
+    <script>
+		
+		            function changeLang(lang) {
+if (lang == "es") {
+                    $(".es").show();
+                    $(".fr").hide();
+                    $(".en").hide();
+                }
+                if (lang == "fr" || lang == null || lang == undefined || lang == "") {
+                    $(".fr").show();
+                    $(".es").hide();
+                    $(".en").hide();
+                }
+                if (lang == "en") {
+                    $(".en").show();
+                    $(".es").hide();
+                    $(".fr").hide();
+                }
+            }
+            
+            function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+		
+		
+		
+$(document).ready(function() {
+var theLanguage = "fr"
+theLanguage = getParameterByName('lang');
+console.log('lang:'+theLanguage)
+           var changelangexec= changeLang(theLanguage);
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+}}
+            );
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="brand" style="width: 100%;background-color: white;"><img src="img/elo_logo2.svg" width="450" height="247" style="background-color: white;"></div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+            <a class="navbar-brand" href="index.html"><img src="img/elo_logo2.svg" width="110" height="53"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html?lang=es" class="es">Inicio</a-->
+                    <a href="index.html?lang=fr" class="fr">Accueil</a>
+                    <a href="index.html?lang=en" class="en">Home</a>
+                </li>
+                <li>
+                    <a href="about.html?lang=es" class="es">Información</a-->
+                    <a href="about.html?lang=fr" class="fr">Information</a>
+                    <a href="about.html?lang=en" class="en">Information</a>
+                </li>
+                <li>
+                    <a href="contact.html?lang=es" class="es">Contacto</a>
+                    <a href="contact.html?lang=fr" class="fr">Contact</a>
+                    <a href="contact.html?lang=en" class="en">Contact</a>
+                </li>
+                <!--li>
+                    <a href="content.html?lang=es" class="es">Contenidos</a>
+                    <a href="content.html?lang=fr" class="fr">Contenus</a>
+                    <a href="content.html?lang=en" class="en">Contents</a>
+                </li-->
+            </ul>
+        </div>
+        
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+
+
+<img src="img/fr.png" style="height:9%;width:9%" class="chglang" name="fr" onclick="changeLang('fr')">
+<img src="img/en.png" style="height:9%;width:9%" class="chglang" name="en" onclick="changeLang('en')">
+<img src="img/es.png" style="height:9%;width:9%" class="chglang" name="es" onclick="changeLang('es')">
+    <div></div>
+    <!--div id="langsel" style="position:absolute;top:50px;left:5%;z-index:1000"><!--img src="img/es.png" style="height:5%;width:5%" class="chglang" name="es" onclick="changeLang('es')"></img><img src="img/fr.png" style="height:8%;width:8%" class="chglang" name="fr" onclick="changeLang('fr')"></img><img src="img/en.png" style="height:8%;width:8%" class="chglang" name="en" onclick="changeLang('en')"></img></div-->
+    <div class="address-bar es elotitre" style="color:#f9f2f2">Cursos de francès</div>
+<div class="address-bar es elo" style="color:#f9f2f2">En linea (en todo el mundo)</div>
+<div class="address-bar es elo" style="color:#f9f2f2"><span>Presencial en Barcelona / Sant Cugat</span></div>
+    <div class="address-bar fr elotitre" style="color:#f9f2f2">Cours de français</div>
+<div class="address-bar fr elo" style="color:#f9f2f2">En ligne (partout dans le monde)</div>
+<div class="address-bar fr elo" style="color:#f9f2f2"><span>Présentiel à Barcelone / Sant Cugat</span></div>
+    <div class="address-bar en elotitre" style="color:#f9f2f2">French lessons</div>
+    <div class="address-bar en elo" style="color:#f9f2f2">Online (all over the world)</div>
+    <div class="address-bar en elo" style="color:#f9f2f2"><span>Face to face in Barcelona / Sant Cugat</span></div>
+
+    
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center es">Contactar
+                        <strong>Elodie Brunel</strong>
+                    </h2>
+                    <h2 class="intro-text text-center en">Contact
+                        <strong>Elodie Brunel</strong>
+                    </h2>
+                     <h2 class="intro-text text-center fr">Contacter
+                        <strong>Elodie Brunel</strong>
+                    </h2>
+                    <hr>
+                </div>
+<div class="col-md-12">
+                    <p><span class="es">Correo Electronico:</span><span class="fr">Courriel:</span><span class="en">Email:</span>
+                        <strong><a href="mailto:contact@elolafrance.com">contact@elolafrance.com</a></strong>
+                    </p>                    
+                </div>
+                <div class="col-md-12">
+                    <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+                    <div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5978.544926871356!2d2.0859891303745832!3d41.47669242474971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2ses!4v1694951874481!5m2!1sfr!2ses" width="100%" height="450px%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Elodie Brunel 2018-2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

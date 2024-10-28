@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Elo la France</title>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/ebrunel.css" rel="stylesheet">
+    <link href="css/font_custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="css/font1.css" rel="stylesheet" type="text/css">
+    <link href="css/font2.css" rel="stylesheet" type="text/css">
+        <style>
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e2245d; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #254a77; 
+}
+</style>
+    <script>
+		
+		            function changeLang(lang) {
+if (lang == "es") {
+                    $(".es").show();
+                    $(".fr").hide();
+                    $(".en").hide();
+                }
+                if (lang == "fr" || lang == null || lang == undefined || lang == "") {
+                    $(".fr").show();
+                    $(".es").hide();
+                    $(".en").hide();
+                }
+                if (lang == "en") {
+                    $(".en").show();
+                    $(".es").hide();
+                    $(".fr").hide();
+                }
+            }
+            
+            function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+		
+		
+		
+$(document).ready(function() {
+var theLanguage = "fr"
+theLanguage = getParameterByName('lang');
+console.log('lang:'+theLanguage)
+           var changelangexec= changeLang(theLanguage);
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+}}
+            );
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="brand" style="width: 100%;background-color: white;"><img src="img/elo_logo2.svg" width="450" height="247" style="background-color: white;"></div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+            <a class="navbar-brand" href="index.html"><img src="img/elo_logo2.svg" width="110" height="53"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html?lang=es" class="es">Inicio</a-->
+                    <a href="index.html?lang=fr" class="fr">Accueil</a>
+                    <a href="index.html?lang=en" class="en">Home</a>
+                </li>
+                <li>
+                    <a href="about.html?lang=es" class="es">Información</a-->
+                    <a href="about.html?lang=fr" class="fr">Information</a>
+                    <a href="about.html?lang=en" class="en">Information</a>
+                </li>
+                <li>
+                    <a href="contact.html?lang=es" class="es">Contacto</a>
+                    <a href="contact.html?lang=fr" class="fr">Contact</a>
+                    <a href="contact.html?lang=en" class="en">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+
+
+<img src="img/fr.png" style="height:9%;width:9%" class="chglang" name="fr" onclick="changeLang('fr')">
+<img src="img/en.png" style="height:9%;width:9%" class="chglang" name="en" onclick="changeLang('en')">
+<img src="img/es.png" style="height:9%;width:9%" class="chglang" name="es" onclick="changeLang('es')">
+    <div></div>
+    <!--div id="langsel" style="position:absolute;top:50px;left:5%;z-index:1000"><!--img src="img/es.png" style="height:5%;width:5%" class="chglang" name="es" onclick="changeLang('es')"></img><img src="img/fr.png" style="height:8%;width:8%" class="chglang" name="fr" onclick="changeLang('fr')"></img><img src="img/en.png" style="height:8%;width:8%" class="chglang" name="en" onclick="changeLang('en')"></img></div-->
+    <div class="address-bar es elotitre" style="color:#f9f2f2">Cursos de francès</div>
+<div class="address-bar es elo" style="color:#f9f2f2">En linea (en todo el mundo)</div>
+<div class="address-bar es elo" style="color:#f9f2f2"><span>Presencial en Barcelona / Sant Cugat</span></div>
+    <div class="address-bar fr elotitre" style="color:#f9f2f2">Cours de français</div>
+<div class="address-bar fr elo" style="color:#f9f2f2">En ligne (partout dans le monde)</div>
+<div class="address-bar fr elo" style="color:#f9f2f2"><span>Présentiel à Barcelone / Sant Cugat</span></div>
+    <div class="address-bar en elotitre" style="color:#f9f2f2">French lessons</div>
+    <div class="address-bar en elo" style="color:#f9f2f2">Online (all over the world)</div>
+    <div class="address-bar en elo" style="color:#f9f2f2"><span>Face to face in Barcelona / Sant Cugat</span></div>
+
+    
+
+    <div class="container">
+
+        <div class="row es">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators hidden-xs">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="img-responsive img-full" src="img/business2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" src="img/jaime_parler_francais2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" src="img/professional2.png" alt="">
+                            </div>
+
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    </div>
+                    <!--h2 class="brand-before">
+                        <small>Bienvenido</small>
+                    </h2-->
+                    <h1 class="brand-name">Cursos de francès</h1>
+                    <hr class="tagline-divider">
+                    <h2>
+                        <small>Con
+                            <strong>Elodie</strong>
+                        </small>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        
+        
+                <div class="row fr">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators hidden-xs">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="img-responsive img-full" src="img/business2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" src="img/jaime_parler_francais2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" src="img/professional2.png" alt="">
+                            </div>
+
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    </div>
+                    <!--h2 class="brand-before">
+                        <small>Bienvenue</small>
+                    </h2-->
+                    <h1 class="brand-name">Cours de français langue étrangère</h1>
+                    <hr class="tagline-divider">
+                    <h2>
+                        <small>Avec
+                            <strong>Elodie</strong>
+                        </small>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        
+        
+         <div class="row en">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators hidden-xs">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="img-responsive img-full" src="img/business2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" src="img/jaime_parler_francais2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" src="img/professional2.png" alt="">
+                            </div>
+
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    </div>
+                    <!--h2 class="brand-before">
+                        <small>Welcome</small>
+                    </h2-->
+                    <h1 class="brand-name">French as a Foreign Language (FLE) lessons</h1>
+                    <hr class="tagline-divider">
+                    <h2>
+                        <small>with
+                            <strong>Elodie</strong>
+                        </small>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+
+         <div class="row es">
+            <div class="box">
+                <div class="col-lg-12">
+                    
+                    <hr>
+                    <h2 class="intro-text text-center">Un poco más sobre mi perfil!
+                    </h2>
+<img src="/img/elo.png" style="border-radius: 50%; height: 10%;width: 10%;float: left;margin: 20px">                
+                    <p>Soy Francesa nativa de Bretaña al oeste de Francia, ofrezco clases de francés a cualquier persona que quiere aprender o mejorar su nivel online o presencialmente.</p><p>Hoy vivo en España, en Sant Cugat del Vallés, una ciudad al lado de Barcelona desde abril de 2022.</p>
+                    <p>Tengo el Diploma de «Aptitude à l'Enseignement du Français comme Langue Étrangère» (DAEFLE) obtenido en 2014 con la Alianza Francesa de París.</p>
+                    <p>He trabajado en Bélgica, Francia, Suiza y España con adultos, adolescentes y niños de distintas nacionalidades utilizando diversos métodos según las necesidades de cada uno.
+A lo largo de mis años de experiencia, enseño el francés con un enfoque pragmático proponiendo una variedad de recursos didácticos (podcasts, videos, libros educativos, juegos, noticias, paginas web...).</p>
+                    <p>Cuando las clases son presenciales, también utilizo situaciones de la vida real, juegos de rol y salidas culturales para que las clases sean lo más dinámicas posible!</p>
+                    <p>También ayudo a los estudiantes a preparar los exámenes oficiales:<br>
+- <strong><a target="_blank" href="http://www.ciep.fr/delf-dalf">DELF</a></strong>: niveles A1, A2, B1, B2<br>
+- <strong><a target="_blank" href="http://www.ciep.fr/delf-dalf">DALF</a></strong>: niveles C1, C2<br></p><p>Además trabajo con diversas empresas: industria farmacéutica, jefes de empresas, bancos, publicidad, abogados, HORECA, etc.</p>
+<p>Imparto clases online o presenciales en mi domicilio, su casa o empresa en clases individuales o en grupo.<br> ¡No dude en contactar conmigo para más información!</p>
+<p>¡Gracias y hasta pronto!</p>
+    <p>Elodie</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+             
+        <div class="row fr">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Un peu plus sur mon profil !
+                    </h2>
+<img src="/img/elo.png" style="border-radius: 50%; height: 10%;width: 10%;float: left;margin: 20px">                 
+                    <p>Française originaire de Bretagne, je propose des cours de français à toutes les personnes qui souhaitent apprendre ou améliorer leur niveau de langue en ligne ou en face à face.
+</p><p>Je possède le Diplôme d'Aptitude à l'Enseignement du Français comme Langue Étrangère (DAEFLE) obtenu en 2014 avec l'Alliance Française de Paris.
+</p><p>J'ai travaillé en Belgique, France, Suisse et Espagne avec des adultes, adolescents et enfants en utilisant des méthodes diversifiées en fonction des besoins de chacun.
+Au fil de mes années d'expérience, j'ai construit une approche pragmatique pour enseigner le français avec différents supports (podcasts, vidéos, livres pédagogiques, jeux, actualités, sites web...).
+</p><p>Lorsque les cours se déroulent en face à face, je propose aussi des mises en situations réelles, des jeux de rôles, des sorties culturelles pour que les classes soient le plus dynamiques possibles où l’action pend une part importante dans le cours!</p>
+<p>
+De plus, j'aide à la préparation des examens officiels :<br>
+
+- <strong><a target="_blank" href="http://www.ciep.fr/delf-dalf">DELF</a></strong>: niveau A1, A2, B1, B2<br>
+- <strong><a target="_blank" href="http://www.ciep.fr/delf-dalf">DALF</a></strong>: niveau C1, C2<br></p>
+<p>Je travaille également avec différentes entreprises : industrie pharmaceutique, chefs d'entreprise, banques, publicité, avocats, HORECA...</p>
+<p>Je donne des classes en ligne ou en face à face à mon domicile, votre domicile ou entreprise en cours individuel ou en groupe. N’hésitez pas à me contacter pour plus d’informations!</p>
+<p>Merci et à bientôt!</p>
+    <p>Elodie</p>
+                </div>
+            </div>
+        </div>
+        
+         <div class="en">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">A little more about me !
+                    </h2>
+    <img src="/img/elo.png" style="border-radius: 50%; height: 10%;width: 10%;float: left;margin: 20px">  
+                    <p>I am a french native from Brittany, I offer French lessons to anyone who wants to learn or improve their level online or face-to-face.
+</p><p>Today I live in Spain, in Sant Cugat del Vallés, a city next to Barcelona since April 2022.
+</p><p>I hold the Diplôme d'Aptitude à l'Enseignement du Français comme Langue Étrangère (DAEFLE) obtained in 2014 with the Alliance Française de Paris.
+</p><p>I have worked in Belgium, France, Switzerland and Spain with adults, teenagers and children using a variety of methods according to each individual's needs.
+Over my years of experience, I have built up a pragmatic approach to teach French using a variety of media (podcasts, videos, educational books, games, news, websites...).</p>
+<p>When the lessons are face-to-face, I also use real-life situations, role-playing and cultural outings to ensure that the classes are as dynamic as possible where the action plays an important part in the lessons!</p>
+<p>
+I also help students to prepare official exams:<br>
+
+- <strong><a target="_blank" href="http://www.ciep.fr/delf-dalf">DELF</a></strong>: levels A1, A2, B1, B2<br>
+- <strong><a target="_blank" href="http://www.ciep.fr/delf-dalf">DALF</a></strong>: levels C1, C2<br></p>
+<p>I have also worked with various companies: pharmaceutical industry, company directors, banks, advertising, lawyers, HORECA, etc.</p>
+<p>I give classes online or face-to-face at my home, your home or company in individual or group lessons. Don't hesitate to contact me for more information!</p>
+<p>Thank you and see you soon!</p>
+    <p>Elodie</p>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Elodie Brunel 2018-2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>
